@@ -1,0 +1,10 @@
+config:
+  target: http://localhost:9966/petclinic/api
+
+scenarios:
+- name: petclinic
+  flow:
+  - get:
+      url: /pets
+  - get:
+      url: /pettypes
