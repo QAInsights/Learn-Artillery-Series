@@ -1,7 +1,16 @@
 config:
   target: http://localhost:9966/petclinic/api
+  phases:
+    - name: smoke_testing
+      duration: 1
+      arrivalRate: 5
   payload:
     path: ./test-data/vets-data.csv
+    order: sequence           # default: random
+    loadAll: true             
+    skipHeader: true          # default: false  
+    delimiter: ","            # default: ,
+    skipEmptyLines: true      # default: true
     fields:
       - "firstName"
       - "lastName"
