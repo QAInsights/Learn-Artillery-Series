@@ -7,8 +7,8 @@ Please check [https://www.youtube.com/playlist?list=PLJ9A48W0kpRJh1_uW2mVNhSIVCM
 This series will cover
 
 - [x] Introduction
-- [ ] Hello Web Service
-- [ ] Data Parameterization
+- [x] Hello Web Service
+- [x] Data Parameterization
 - [ ] Extraction
 - [ ] Validation
 - [ ] Debugging

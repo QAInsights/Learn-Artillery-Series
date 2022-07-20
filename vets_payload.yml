@@ -1,0 +1,25 @@
+config:
+  target: http://localhost:9966/petclinic/api
+  payload:
+    path: ./test-data/vets-data.csv
+    fields:
+      - "firstName"
+      - "lastName"
+      - "id"
+      - "specialtyName"
+
+scenarios:
+- name: petclinic_add_vets
+  flow:
+  - post:
+      url: /vets
+      headers:
+        Content-Type: application/json
+      json:
+        firstName: "{{ firstName }}"
+        lastName: "{{ lastName }}"
+        id: "{{ id }}"
+        specialties:
+          -
+            id: "{{ id }}"
+            name: "{{ specialtyName }}"
