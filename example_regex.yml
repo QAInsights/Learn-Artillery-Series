@@ -1,0 +1,22 @@
+config:
+  target: http://example.com
+  
+scenarios:
+- name: example_dot_com
+  flow:
+  - get:
+      url: /
+      capture: 
+      - strict: true
+        regexp: "<title>(.+?)<\/title>"
+        as: "extract_title"
+        group: 1
+        flags: g
+        
+      - strict: false
+        header: "content-length"
+        as: "extract_content_length"
+        group: 1
+        
+  - log: "Extracted Title: {{ extract_title }}"
+  - log: "Extracted Content Length: {{ extract_content_length }}"

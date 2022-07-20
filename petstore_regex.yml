@@ -1,0 +1,14 @@
+config:
+  target: https://jpetstore-qainsights.cloud.okteto.net/jpetstore
+  
+scenarios:
+- name: example_dot_com
+  flow:
+  - get:
+      url: /actions/Catalog.action?viewCategory=&categoryId=FISH
+      capture:
+        regexp: "<a href=\"(.+?)\">(.+?)<\/a>"
+        as: "extract_href"
+        group: 1
+        flags: g
+  - log: "Extracted Link: {{ extract_href }}"
