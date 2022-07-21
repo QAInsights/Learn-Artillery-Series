@@ -1,13 +1,13 @@
 config:
-  target: http://example.com
+  target: https://example.com
   
 scenarios:
 - name: example_dot_com
   flow:
   - get:
-      url: /
+      url: /      
       capture: 
-      - strict: true
+      - strict: true    # If no match, subsequent request will fail
         regexp: "<title>(.+?)<\/title>"
         as: "extract_title"
         group: 1
@@ -17,6 +17,6 @@ scenarios:
         header: "content-length"
         as: "extract_content_length"
         group: 1
-        
+
   - log: "Extracted Title: {{ extract_title }}"
   - log: "Extracted Content Length: {{ extract_content_length }}"

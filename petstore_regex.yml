@@ -9,6 +9,6 @@ scenarios:
       capture:
         regexp: "<a href=\"(.+?)\">(.+?)<\/a>"
         as: "extract_href"
-        group: 1
+        group: 2
         flags: g
   - log: "Extracted Link: {{ extract_href }}"
