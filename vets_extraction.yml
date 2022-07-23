@@ -1,9 +1,21 @@
 config:
   target: http://localhost:9966/petclinic/api
-  phases:
-    - name: smoke_testing
-      duration: 1
-      arrivalRate: 1
+  plugins:
+        expect: {}
+  
+  environments:
+    load:  
+      phases:
+        - name: smoke_load_testing
+          duration: 10
+          arrivalRate: 10
+      
+    functional:
+      phases:
+        - name: func_smoke_testing
+          duration: 1
+          arrivalCount: 1
+
   payload:
     path: ./test-data/vets-data.csv
     order: sequence           # default: random
@@ -35,6 +47,11 @@ scenarios:
       capture:
         json: "$.id"
         as: "id"
-      
+
+      expect:
+        - matchesRegexp: id
   - get:
       url: "/vets/{{ id }}"     
+      expect:
+      - statusCode: 200
+      - contentType: json
