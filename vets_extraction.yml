@@ -1,7 +1,7 @@
 config:
   target: http://localhost:9966/petclinic/api
   plugins:
-        expect: {}
+    expect: {}
   
   environments:
     load:  
@@ -49,7 +49,7 @@ scenarios:
         as: "id"
 
       expect:
-        - matchesRegexp: id
+        - matchesRegexp: .+
   - get:
       url: "/vets/{{ id }}"     
       expect:
