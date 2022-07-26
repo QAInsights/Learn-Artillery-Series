@@ -9,9 +9,9 @@ This series will cover
 - [x] Introduction
 - [x] Hello Web Service
 - [x] Data Parameterization
-- [ ] Extraction
-- [ ] Validation
-- [ ] Debugging
-- [ ] Reporting
+- [x] Extraction
+- [x] Validation
+- [x] Debugging
+- [x] Reporting
 - [ ] Serverless Performance Testing
 - [ ] CI/CD Integration
