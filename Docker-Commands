@@ -1,0 +1,17 @@
+# Docker Commands for Artillery
+
+```docker
+docker pull artilleryio/artillery:latest
+```
+
+```docker
+docker run -it --entrypoint /bin/sh artilleryio/artillery
+```
+
+```docker
+docker inspect <container_id> | jq .[0].Config
+```
+
+```docker
+docker run -it -v ${PWD}:/scripts artilleryio/artillery:latest run /scripts/example_regex.yml --output /scripts/load-run.json
+```

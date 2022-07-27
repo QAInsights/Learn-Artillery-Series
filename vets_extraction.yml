@@ -7,7 +7,7 @@ config:
     load:  
       phases:
         - name: smoke_load_testing
-          duration: 10
+          duration: 5
           arrivalRate: 10
       
     functional:
