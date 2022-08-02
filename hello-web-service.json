@@ -1,0 +1,76 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.petclinic": 1,
+      "vusers.created": 1,
+      "http.requests": 2,
+      "http.codes.200": 2,
+      "http.responses": 2,
+      "vusers.failed": 0,
+      "vusers.completed": 1
+    },
+    "rates": {
+      "http.request_rate": 1
+    },
+    "firstCounterAt": 1658968781730,
+    "firstHistogramAt": 1658968781786,
+    "lastCounterAt": 1658968781803,
+    "lastHistogramAt": 1658968781803,
+    "firstMetricAt": 1658968781730,
+    "lastMetricAt": 1658968781803,
+    "period": 1658968780000,
+    "summaries": {
+      "http.response_time": {
+        "min": 5,
+        "max": 13,
+        "count": 2,
+        "p50": 5,
+        "median": 5,
+        "p75": 5,
+        "p90": 5,
+        "p95": 5,
+        "p99": 5,
+        "p999": 5
+      },
+      "vusers.session_length": {
+        "min": 72.8,
+        "max": 72.8,
+        "count": 1,
+        "p50": 73,
+        "median": 73,
+        "p75": 73,
+        "p90": 73,
+        "p95": 73,
+        "p99": 73,
+        "p999": 73
+      }
+    },
+    "histograms": {
+      "http.response_time": {
+        "min": 5,
+        "max": 13,
+        "count": 2,
+        "p50": 5,
+        "median": 5,
+        "p75": 5,
+        "p90": 5,
+        "p95": 5,
+        "p99": 5,
+        "p999": 5
+      },
+      "vusers.session_length": {
+        "min": 72.8,
+        "max": 72.8,
+        "count": 1,
+        "p50": 73,
+        "median": 73,
+        "p75": 73,
+        "p90": 73,
+        "p95": 73,
+        "p99": 73,
+        "p999": 73
+      }
+    }
+  },
+  "intermediate": []
+}
